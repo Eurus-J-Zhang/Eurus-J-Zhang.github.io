@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel= "stylesheet" href="style_group1.css">
+        <link rel="shortcut icon" href="#">
+        <title>CSS Position</title>
+        <style>
+        </style>
+        
+    </head>
+    <body>     
+        <div class="grid-parent">
+
+            <div class = "title name"> "Modelling Made Easy" User Experiment</div>
+            <div class = "title name"> <a href="https://aaltofi-my.sharepoint.com/:b:/g/personal/jiayi_zhang_aalto_fi/ETYx6GsZjB9DsamEOw-njQwBKqyicwTXT72gtgRBFDizRg?e=q8tc9s">Tutorial link</a></div>
+
+            <div class = "box-one">
+                <div class = "subtitle">Variable exploration</div>
+                <div class = "note">Note: This session is for exploring the variables.</div>
+                <div class = "content">
+                    <div class="vbar-one">
+                        <select id="variable-one" size=8 >
+                            <option value="X1">X1</option>
+                            <option value="X2">X2</option>
+                            <option value="X3">X3</option>
+                            <option value="X4">X4</option>
+                            <option value="X5">X5</option>
+                            <option value="X6">X6</option>
+                            <option value="X7">X7</option>
+                            <option value="X8">X8</option>
+                        </select>
+                        <button class ="trybutton" id="trybuttonone">Try it</button>
+                    </div>
+                    <div class = "chart-c" id="chart-container"></div>
+                </div>
+            </div>
+           
+            <div class = "box-two">
+                <div class = "title-two"><b>Assistance advice</b></div>
+                <div class = "note">Note: This session is for showing recommendations from AI.</div>
+                <p class = "v vv" id = "recommendataion">Variable review recommendation: X1</p>
+                <!-- <div class = "graph">/here would be a graph/</div> -->
+                <div class = "chart-c" id="chart-container-AI"></div>
+                
+                <div class = "bottom">
+                     <button class = "buttonnext" id="B_Another">Try another suggestion</button> 
+                    <button class = "buttonexplore" id = "B_Explore">Explore</button>
+                </div>
+            </div>
+            
+            <div class = "box-three">
+                <div class = "subtitle">Variable Correlation Exploration</div>
+                <div class = "note">Note: This session is for exploring the relationship between two variables.</div>
+                    <div class = "content-three">
+                        <div class="vbar-two">
+                            <select id="variable-two" size=8 style="width:80px;">
+                                <option value="X1">X1</option>
+                                <option value="X2">X2</option>
+                                <option value="X3">X3</option>
+                                <option value="X4">X4</option>
+                                <option value="X5">X5</option>
+                                <option value="X6">X6</option>
+                                <option value="X7">X7</option>
+                                <option value="X8">X8</option>
+                            </select>
+                            
+                        </div>
+                        
+                        <div class="vbar-three">
+                            <select id="variable-three" size=8 style="width:80px;">
+                                <option value="X1">X1</option>
+                                <option value="X2">X2</option>
+                                <option value="X3">X3</option>
+                                <option value="X4">X4</option>
+                                <option value="X5">X5</option>
+                                <option value="X6">X6</option>
+                                <option value="X7">X7</option>
+                                <option value="X8">X8</option>
+                            </select>
+                            <button class="trybutton" id="trybuttonthree">Try it</button>
+                        </div>
+                    <div>
+                        <div class = "chart-c" id="chart-container-two"></div>
+                    </div>        
+
+                    
+                </div>
+            </div>
+
+            <div class = "box-four">
+        
+                <div class = "subtitle">Model Selection</div>
+                <div class = "note">Note: Please choose the proper variables to be included in the model to the left box. And then you may ask AI's feedback, and submit your final choice in the end. </div>
+                    <section class="container">
+                        <div>
+                            <select id="leftValues" size="5" multiple></select>
+                        </div>
+                        <div>
+                            <input type="button" id="btnLeft" value="&lt;&lt;" />
+                            <input type="button" id="btnRight" value="&gt;&gt;" />
+                        </div>
+                        <div>
+                            <select id="rightValues" size="4" multiple>
+                                <option>X1</option>
+                                <option>X2</option>
+                                <option>X3</option>
+                                <option>X4</option>
+                                <option>X5</option>
+                                <option>X6</option>
+                                <option>X7</option>
+                                <option>X8</option>
+                            </select>
+
+                        </div>
+                    </section>
+
+                <div class = "bottom">
+                    <button class = "resetbutton" id="GetFB">Get feedback from AI</button>
+                    <button class = "submitbutton">Submit</button>
+                </div>
+                
+            </div>
+        </div>
+           
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> 
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+        <script src="script_group1.js"></script>
+    </body>
+</html>
+
