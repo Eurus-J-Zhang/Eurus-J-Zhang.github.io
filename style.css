@@ -41,6 +41,7 @@
 
 .vbar{
     background-color: thistle;
+    display: grid;
     gap: 5px;
 }
 
@@ -62,7 +63,7 @@
 
 .box-two {
     background-color: white;
-    /* color: black; */
+
     text-align: center;
     display: grid;
     grid-template-rows: 1fr 1fr 1fr 8.5fr 1.5fr ;
@@ -176,6 +177,10 @@ SECTION > DIV + DIV {
     grid-template-columns: 50% 50%;
 }
 
+/* .resetbutton{
+    border: 1px solid black;
+    border-radius: 5px;
+} */
 
 .submitbutton{
     background-color: tomato;
@@ -190,6 +195,7 @@ SECTION > DIV + DIV {
     margin-left: auto;
     margin-right: auto;
 }
+
 
 #chart-container-AI{
     width: 330px;
@@ -207,6 +213,8 @@ SECTION > DIV + DIV {
 #trybuttontwo{
     grid-column: span 2;
 }
+
+
 
 .selectbox{
     margin-top: auto;
