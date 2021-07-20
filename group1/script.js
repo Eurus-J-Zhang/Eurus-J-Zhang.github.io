@@ -1,8 +1,12 @@
 
-
-    document.querySelector(".submitbutton").addEventListener('click',function(){
-        const values = $('#leftValues').val();
-        alert("Submitted: " + values.toString());
+    $(".submitbutton").click(function(){
+        const values = [];
+        $("#leftValues option").each(function()
+        {
+            // Add $(this).val() to your list
+            values.push($(this).val());
+        });
+        alert("Submitted: " + values.join(', '));
     })
 
 
@@ -17,15 +21,15 @@
     });
     
 
-    document.querySelector("#btnLeft").addEventListener('click',function(){
+    $("#btnLeft").click(function(){
         const random_number = Math.floor(Math.random() * 8)+1;
         const random_value = "X".concat(random_number.toString());
-        document.getElementById("recommendataion").innerHTML = "Variable review recommendation: ".concat(random_value);
+        $("#recommendataion").innerHTML = "Variable review recommendation: ".concat(random_value);
         const myDataAI = generateDataPairFromX(allData[random_value],allData.Y);
         const myChartAI = createChart(myDataAI, 'chart-container-AI', random_value, 'Y');
         console.log('ready :)');
-        document.querySelector('#trybuttontwo').style.visibility="visible";
-        document.querySelector("#trybuttontwo").addEventListener('click',function(){
+        $('#trybuttontwo').style.visibility="visible";
+        $("#trybuttontwo").click(function(){
             const myData = generateDataPairFromX(allData[random_value], allData.Y);
             const myDataTwo = generateDataPairFromX(allData[random_value], allData[random_value]);
             const myChart = createChart(myData, 'chart-container', random_value, 'Y');
@@ -35,15 +39,15 @@
         })
     });
 
-    document.querySelector("#btnRight").addEventListener('click',function(){
+    $("#btnRight").click(function(){
         const random_number = Math.floor(Math.random() * 8)+1;
         const random_value = "X".concat(random_number.toString());
-        document.getElementById("recommendataion").innerHTML = "Variable review recommendation: ".concat(random_value);
+        $("recommendataion").innerHTML = "Variable review recommendation: ".concat(random_value);
         const myDataAI = generateDataPairFromX(allData[random_value],allData.Y);
         const myChartAI = createChart(myDataAI, 'chart-container-AI', random_value, 'Y');
         console.log('ready :)');
-        document.querySelector('#trybuttontwo').style.visibility="visible";
-        document.querySelector("#trybuttontwo").addEventListener('click',function(){
+        $('#trybuttontwo').style.visibility="visible";
+        $("#trybuttontwo").click(function(){
             const myData = generateDataPairFromX(allData[random_value], allData.Y);
             const myDataTwo = generateDataPairFromX(allData[random_value], allData[random_value]);
             const myChart = createChart(myData, 'chart-container', random_value, 'Y');
@@ -108,7 +112,7 @@ function createChart(data, containerId, xID, yID){
 }
 
 
-document.querySelector('select#variable-one').addEventListener('click',function(){
+$('select#variable-one').click(function(){
     const userSelectedX = document.getElementById("variable-one").value;
     const myData = generateDataPairFromX(allData[userSelectedX], allData.Y);
     console.log(allData)
@@ -116,7 +120,7 @@ document.querySelector('select#variable-one').addEventListener('click',function(
     console.log('ready :)');
 })
 
-document.querySelector("select#variable-two").addEventListener('click',function(){
+$("select#variable-two").click(function(){
     const userSelectedXleft = document.getElementById("variable-two").value;
     const userSelectedXbottom = document.getElementById("variable-three").value;
     const myDataTwo = generateDataPairFromX(allData[userSelectedXbottom],allData[userSelectedXleft]);
@@ -124,7 +128,7 @@ document.querySelector("select#variable-two").addEventListener('click',function(
     console.log('ready :)');
 })
 
-document.querySelector('select#variable-three').addEventListener('click',function(){
+$('select#variable-three').click(function(){
     const userSelectedXleft = document.getElementById("variable-two").value;
     const userSelectedXbottom = document.getElementById("variable-three").value;
     const myDataTwo = generateDataPairFromX(allData[userSelectedXbottom],allData[userSelectedXleft]);
@@ -142,7 +146,5 @@ fetch("./data.json")
         const myChart = createChart(myData, 'chart-container', 'X1', 'Y');
         const myDataTwo = generateDataPairFromX(allData.X1, allData.X1);
         const myChartTwo = createChart(myDataTwo, 'chart-container-two','X1', 'X1');
-        // const myDataAI = generateDataPairFromX(allData.X1,allData.Y);
-        // const myChartAI = createChart(myDataAI, 'chart-container-AI', 'X1', 'Y');
     });
 
