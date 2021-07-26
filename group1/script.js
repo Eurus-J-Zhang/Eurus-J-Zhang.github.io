@@ -1,3 +1,11 @@
+// Used to log all actions of the user
+function sendInfoToServer(action_name) {
+	date = Date.now();
+	console.log(action_name + " " + date.toString());$
+	// TODO: send to server
+}
+
+
 
     $(".submitbutton").click(function(){
         const values = [];
@@ -13,11 +21,15 @@
     $("#btnLeft").click(function () {
         var selectedItem = $("#rightValues option:selected");
         $("#leftValues").append(selectedItem);
+		
+		sendInfoToServer("add-" + selectedItem.val());
     });
     
     $("#btnRight").click(function () {
         var selectedItem = $("#leftValues option:selected");
         $("#rightValues").append(selectedItem);
+		
+		sendInfoToServer("remove-" + selectedItem.val());
     });
     
 
