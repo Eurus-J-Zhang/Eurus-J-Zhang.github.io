@@ -130,26 +130,28 @@ $('select#variable-one').click(function(){
     console.log(allData)
     const myChart = createChart(myData, 'chart-container', userSelectedX, 'Y');
     console.log('ready :)');
-	sendInfoToServer("vis-1", userSelectedX);
-})
+	//sendInfoToServer("vis-1", userSelectedX);
+});
+
+
+
+function visualize2vars() {
+	const userSelectedXleft = document.getElementById("variable-two").value;
+    const userSelectedXbottom = document.getElementById("variable-three").value;
+    const myDataTwo = generateDataPairFromX(allData[userSelectedXbottom],allData[userSelectedXleft]);
+    const myChartTwo = createChart(myDataTwo, 'chart-container-two',userSelectedXbottom, userSelectedXleft);
+    console.log('ready :)');
+	sendInfoToServer("vis-2", [userSelectedXleft, userSelectedXbottom]);
+}
+
 
 
 $("select#variable-two").click(function(){
-    const userSelectedXleft = document.getElementById("variable-two").value;
-    const userSelectedXbottom = document.getElementById("variable-three").value;
-    const myDataTwo = generateDataPairFromX(allData[userSelectedXbottom],allData[userSelectedXleft]);
-    const myChartTwo = createChart(myDataTwo, 'chart-container-two',userSelectedXbottom, userSelectedXleft);
-    console.log('ready :)');
-	sendInfoToServer("vis-2", [userSelectedXleft, userSelectedXbottom]);
-})
+    visualize2vars();
+}); 
 
 $('select#variable-three').click(function(){
-    const userSelectedXleft = document.getElementById("variable-two").value;
-    const userSelectedXbottom = document.getElementById("variable-three").value;
-    const myDataTwo = generateDataPairFromX(allData[userSelectedXbottom],allData[userSelectedXleft]);
-    const myChartTwo = createChart(myDataTwo, 'chart-container-two',userSelectedXbottom, userSelectedXleft);
-    console.log('ready :)');
-	sendInfoToServer("vis-2", [userSelectedXleft, userSelectedXbottom]);
+    visualize2vars();
 })
 
 document.querySelector('#trybuttontwo').style.visibility="hidden";
