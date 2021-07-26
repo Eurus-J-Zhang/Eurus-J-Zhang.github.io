@@ -1,7 +1,7 @@
 // Used to log all actions of the user
-function sendInfoToServer(action_name) {
+function sendInfoToServer(action_type, parameters) {
 	date = Date.now();
-	console.log(action_name + " " + date.toString());$
+	console.log(action_type + " " + parameters + " | " + date.toString());
 	// TODO: send to server
 }
 
@@ -22,14 +22,14 @@ function sendInfoToServer(action_name) {
         var selectedItem = $("#rightValues option:selected");
         $("#leftValues").append(selectedItem);
 		
-		sendInfoToServer("add-" + selectedItem.val());
+		sendInfoToServer("add", selectedItem.val());
     });
     
     $("#btnRight").click(function () {
         var selectedItem = $("#leftValues option:selected");
         $("#rightValues").append(selectedItem);
 		
-		sendInfoToServer("remove-" + selectedItem.val());
+		sendInfoToServer("remove", selectedItem.val());
     });
     
 
@@ -130,7 +130,9 @@ $('select#variable-one').click(function(){
     console.log(allData)
     const myChart = createChart(myData, 'chart-container', userSelectedX, 'Y');
     console.log('ready :)');
+	sendInfoToServer("vis-1", userSelectedX);
 })
+
 
 $("select#variable-two").click(function(){
     const userSelectedXleft = document.getElementById("variable-two").value;
@@ -138,6 +140,7 @@ $("select#variable-two").click(function(){
     const myDataTwo = generateDataPairFromX(allData[userSelectedXbottom],allData[userSelectedXleft]);
     const myChartTwo = createChart(myDataTwo, 'chart-container-two',userSelectedXbottom, userSelectedXleft);
     console.log('ready :)');
+	sendInfoToServer("vis-2", [userSelectedXleft, userSelectedXbottom]);
 })
 
 $('select#variable-three').click(function(){
@@ -146,6 +149,7 @@ $('select#variable-three').click(function(){
     const myDataTwo = generateDataPairFromX(allData[userSelectedXbottom],allData[userSelectedXleft]);
     const myChartTwo = createChart(myDataTwo, 'chart-container-two',userSelectedXbottom, userSelectedXleft);
     console.log('ready :)');
+	sendInfoToServer("vis-2", [userSelectedXleft, userSelectedXbottom]);
 })
 
 document.querySelector('#trybuttontwo').style.visibility="hidden";
