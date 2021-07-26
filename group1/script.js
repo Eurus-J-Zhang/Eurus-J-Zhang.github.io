@@ -7,6 +7,16 @@ function sendInfoToServer(action_type, parameters) {
 
 
 
+// TODO: To remove
+function getRecommendation() {
+	// TODO: Get real reco
+    const random_number = Math.floor(Math.random() * 8)+1;
+    const random_value = "X".concat(random_number.toString());
+    visualizeReco(random_value);
+}
+
+
+
     $(".submitbutton").click(function(){
         const values = [];
         $("#leftValues option").each(function()
@@ -23,6 +33,8 @@ function sendInfoToServer(action_type, parameters) {
         $("#leftValues").append(selectedItem);
 		
 		sendInfoToServer("add", selectedItem.val());
+		
+		getRecommendation(); // TODO: to remove?
     });
     
     $("#btnRight").click(function () {
@@ -30,44 +42,10 @@ function sendInfoToServer(action_type, parameters) {
         $("#rightValues").append(selectedItem);
 		
 		sendInfoToServer("remove", selectedItem.val());
+		
+		getRecommendation(); // TODO: to remove?
     });
     
-
-    $("#btnLeft").click(function(){
-        const random_number = Math.floor(Math.random() * 8)+1;
-        const random_value = "X".concat(random_number.toString());
-        $("#recommendataion").innerHTML = "Variable review recommendation: ".concat(random_value);
-        const myDataAI = generateDataPairFromX(allData[random_value],allData.Y);
-        const myChartAI = createChart(myDataAI, 'chart-container-AI', random_value, 'Y');
-        console.log('ready :)');
-        $('#trybuttontwo').style.visibility="visible";
-        $("#trybuttontwo").click(function(){
-            const myData = generateDataPairFromX(allData[random_value], allData.Y);
-            const myDataTwo = generateDataPairFromX(allData[random_value], allData[random_value]);
-            const myChart = createChart(myData, 'chart-container', random_value, 'Y');
-            const myChartTwo = createChart(myDataTwo, 'chart-container-two',random_value, random_value);
-            console.log('ready :)');
-            console.log(random_value);
-        })
-    });
-
-    $("#btnRight").click(function(){
-        const random_number = Math.floor(Math.random() * 8)+1;
-        const random_value = "X".concat(random_number.toString());
-        $("recommendataion").innerHTML = "Variable review recommendation: ".concat(random_value);
-        const myDataAI = generateDataPairFromX(allData[random_value],allData.Y);
-        const myChartAI = createChart(myDataAI, 'chart-container-AI', random_value, 'Y');
-        console.log('ready :)');
-        $('#trybuttontwo').style.visibility="visible";
-        $("#trybuttontwo").click(function(){
-            const myData = generateDataPairFromX(allData[random_value], allData.Y);
-            const myDataTwo = generateDataPairFromX(allData[random_value], allData[random_value]);
-            const myChart = createChart(myData, 'chart-container', random_value, 'Y');
-            const myChartTwo = createChart(myDataTwo, 'chart-container-two',random_value, random_value);
-            console.log('ready :)');
-            console.log(random_value);
-        })
-    });
 
 
     let m1,m2,n=[],
@@ -77,6 +55,8 @@ function sendInfoToServer(action_type, parameters) {
     let datapairxx =[];
 
     let allData;
+	
+	let Y_label;
 
 
 
@@ -130,9 +110,9 @@ function createChart(data, containerId, xID, yID){
 
 
 function visualizeVar(userSelectedX) {
-    const myData = generateDataPairFromX(allData[userSelectedX], allData.Y);
+    const myData = generateDataPairFromX(allData[userSelectedX], allData[Y_label]);
     console.log(allData)
-    const myChart = createChart(myData, 'chart-container', userSelectedX, 'Y');
+    const myChart = createChart(myData, 'chart-container', userSelectedX, Y_label);
     console.log('ready :)');
 	sendInfoToServer("vis-1", userSelectedX);
 }
@@ -143,6 +123,28 @@ function visualize2vars(userSelectedXleft, userSelectedXbottom) {
     const myChartTwo = createChart(myDataTwo, 'chart-container-two',userSelectedXbottom, userSelectedXleft);
     console.log('ready :)');
 	sendInfoToServer("vis-2", [userSelectedXleft, userSelectedXbottom]);
+}
+
+function visualizeReco(rec_item) {
+	$("recommendataion").innerHTML = "Variable review recommendation: ".concat(rec_item);
+	const myDataAI = generateDataPairFromX(allData[rec_item], allData[Y_label]);
+	const myChartAI = createChart(myDataAI, 'chart-container-AI', rec_item, Y_label);
+	console.log('ready :)');
+	
+	//$('#trybuttontwo').style.visibility="visible";
+	$("#trybuttontwo").click(function(){
+		visualizeVar(rec_item);
+		visualize2vars(rec_item, rec_item);
+		sendInfoToServer("accept", rec_item);
+		
+		document.getElementById("variable-one").value = rec_item;
+		document.getElementById("variable-two").value = rec_item;
+		document.getElementById("variable-three").value = rec_item;
+		
+		getRecommendation();
+		console.log('ready :)');
+		console.log(rec_item);
+	})
 }
 
 
@@ -181,19 +183,31 @@ $('select#variable-three').click(function(){
 /*    LOADING DATA SET    */
 
 
-document.querySelector('#trybuttontwo').style.visibility="hidden";
+//document.querySelector('#trybuttontwo').style.visibility="hidden";
 
 fetch("./data.json")
     .then(response => response.json())
     .then(data=>{
+		// Read data
         allData = data;
 		const labels = Object.keys(data);
+		Y_label = labels[labels.length - 1];
+		
+		
+		// Plot graphs
 		visualizeVar(labels[0]);
 		visualize2vars(labels[0], labels[0]);
 		
+		
+		// Select variables in list boxes
 		document.getElementById("variable-one").value = labels[0];
 		document.getElementById("variable-two").value = labels[0];
 		document.getElementById("variable-three").value = labels[0];
+		
+		
+		// Get recommendation
+		getRecommendation(); // TODO: to remove?
+		
 		
 		/*
         const myData = generateDataPairFromX(allData.X1, allData.Y);
