@@ -179,6 +179,25 @@ $('select#variable-three').click(function(){
 
 
 
+/*    VARIOUS FUNCTIONS   */
+
+function populate_select_options(vars, selectbox_id) {
+	for(i in vars)
+	{
+	   var opt = document.createElement("option");
+	   opt.value = vars[i];
+	   opt.innerHTML = vars[i];
+
+	   $(selectbox_id).append(opt);
+	   //$("#variable-one").append(opt);
+	   //$("#variable-two").append(opt);
+	   //$("#variable-three").append(opt);
+	   
+	}
+}
+
+
+
 
 /*    LOADING DATA SET    */
 
@@ -191,8 +210,16 @@ fetch("./data.json")
 		// Read data
         allData = data;
 		const labels = Object.keys(data);
+		const X_labels = labels.slice(0,-1);
 		Y_label = labels[labels.length - 1];
 		
+		
+		// Populate select options
+		
+		populate_select_options(X_labels, "#rightValues");
+		populate_select_options(X_labels, "#variable-one");
+		populate_select_options(X_labels, "#variable-two");
+		populate_select_options(X_labels, "#variable-three");
 		
 		// Plot graphs
 		visualizeVar(labels[0]);
