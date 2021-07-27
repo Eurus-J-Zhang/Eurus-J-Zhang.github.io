@@ -40,7 +40,7 @@
 }
 
 .vbar{
-    background-color: thistle;
+    background-color: rgba(202, 202, 202, 0.253);
     display: grid;
     gap: 5px;
 }
@@ -103,21 +103,13 @@
     top: 6px;
   }
   
-  
-.graph{
-    background-color: turquoise;
-    text-align: center;
-    /* padding: 80px; */
-}
+
 
 .buttonnext{
     border: 1px solid black;
     border-radius: 5px;
 }
-.buttonexplore{
-    background-color: yellowgreen;
-    border-radius: 5px;
-}
+
 
 .box-three {
     background-color: white;
@@ -172,10 +164,10 @@ SECTION > DIV + DIV {
     text-align: center;
 }
 
-.bottom{
+/* .bottom{
     display: grid;
     grid-template-columns: 50% 50%;
-}
+} */
 
 /* .resetbutton{
     border: 1px solid black;
@@ -184,8 +176,9 @@ SECTION > DIV + DIV {
 
 .submitbutton{
     background-color: tomato;
-    border-radius: 5px;
-    grid-column: span 2;
+    /* border-radius: 5px; */
+    width: 100px;
+    /* grid-column: span 2; */
 }
 
 .chart-c{

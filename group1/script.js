@@ -1,4 +1,16 @@
 
+    // $(".submitbutton").click(function(){
+    //     const values = [];
+    //     $("#leftValues option").each(function()
+    //     {
+    //         // Add $(this).val() to your list
+    //         values.push($(this).val());
+    //     });
+    //     alert("Submitted: " + values.join(', '));
+    // })
+
+    // click submit to go to modeling_test_after
+
     $(".submitbutton").click(function(){
         const values = [];
         $("#leftValues option").each(function()
