@@ -14,11 +14,20 @@
         <div class = "box-one">
           <form class = "Demo_questionnaire" action="/mme_web_user_study/modeling_test/index.html">
 
-            <label for="name">1. Name:</label><br>
+            <label for="id_number">1. Participant ID:</label><br>
+            <input type="text" id="id_number" name="id_number"><br>
 
-            <input type="text" id="name" name="name"><br>
+            <label for="condition">2. Condition:</label><br>
 
-            <label for="gender">2. What gender do you identify as:</label><br>
+            <input type="radio" id="condi_0" name="condition" value="0">
+            <label for="condi_0">0</label><br>
+            <input type="radio" id="condi_1" name="condition" value="1">
+            <label for="condi_1">1</label><br>
+            <input type="radio" id="condi_2" name="condition" value="2">
+            <label for="condi_2">2</label><br>
+            
+
+            <label for="gender">3. What gender do you identify as:</label><br>
 
             <input type="radio" id="male" name="gender" value="A">
             <label for="male">A. Male</label><br>
@@ -27,7 +36,7 @@
             <input type="radio" id="othergender" name="gender" value="C">
             <label for="others">C. Others</label><br>
 
-            <label for="age">3. What is your age?</label><br>
+            <label for="age">4. What is your age?</label><br>
 
             <input type="radio" id="teen" name="age" value="A">
             <label for="teen">A. 16-20</label><br>
@@ -38,7 +47,7 @@
             <input type="radio" id="otherage" name="age" value="D">
             <label for="otherage">D. Others</label><br>
 
-            <label for="degree">4. What is the highest degree or level of education you have completed?</label><br>
+            <label for="degree">5. What is the highest degree or level of education you have completed?</label><br>
 
             <input type="radio" id="highschool" name="degree" value="A">
             <label for="highschool">A. High School</label><br>
@@ -49,7 +58,7 @@
             <input type="radio" id="others" name="degree" value="D">
             <label for="others">D. Others</label><br>
 
-            <label for="degree">5. How well do you know about linear regression?</label><br>
+            <label for="degree">6. How well do you know about linear regression?</label><br>
 
             <input type="radio" id="a" name="confidence" value="A">
             <label for="a">A. Very well</label><br>

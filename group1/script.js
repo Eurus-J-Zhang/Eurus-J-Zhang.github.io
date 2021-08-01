@@ -12,6 +12,8 @@ function getRecommendation() {
 	// TODO: Get real reco
     const random_number = Math.floor(Math.random() * 8)+1;
     const random_value = "X".concat(random_number.toString());
+    // $("#recommendataion").innerHTML = "Variable review recommendation: ".concat(random_value);
+    // console.log(":_")
     visualizeReco(random_value);
 }
 
@@ -30,6 +32,7 @@ function getRecommendation() {
     // click submit to go to modeling_test_after
 
     $(".submitbutton").click(function(){
+        
         const values = [];
         $("#leftValues option").each(function()
         {
@@ -45,16 +48,19 @@ function getRecommendation() {
         $("#leftValues").append(selectedItem);
 		
 		sendInfoToServer("add", selectedItem.val());
-		
+		// $("#note_test").innerHTML = "Variable review recommendation: "
 		getRecommendation(); // TODO: to remove?
+        // $("#recommendataion").innerHTML = "Variable review recommendation: ";
     });
+
+
     
     $("#btnRight").click(function () {
         var selectedItem = $("#leftValues option:selected");
         $("#rightValues").append(selectedItem);
 		
 		sendInfoToServer("remove", selectedItem.val());
-		
+		// $("#recommendataion").innerHTML = "Variable review recommendation: "
 		getRecommendation(); // TODO: to remove?
     });
     
