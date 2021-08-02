@@ -12,15 +12,11 @@
         <div class="grid-parent">
 
             <div class = "title name"> Modelling Made Easy -- User Experiment</div>
-            <div class = "title_note"> 
-                <p class="t_note">
+            <div class = "title name"> <a href="https://aaltofi-my.sharepoint.com/:b:/g/personal/jiayi_zhang_aalto_fi/ETYx6GsZjB9DsamEOw-njQwBKqyicwTXT72gtgRBFDizRg?e=q8tc9s">Tutorial link</a></div>
 
-                Note: In the model test before, we have </p></div>
             <div class = "box-one">
                 <div class = "subtitle">Variable exploration</div>
-                <div class = "note">Note: This session is for exploring the variables. </br>
-                    Click the variables on the left 
-                    to see the relationship between the dependent variable X and the independent variable Y.</div>
+                <div class = "note">Note: This session is for exploring the variables.</div>
                 <div class = "content">
                     <div class="vbar">
                         <select class="selectbox" id="variable-one" size=8></select>
@@ -30,25 +26,34 @@
             </div>
            
             <div class = "box-two">
-                <div class = "title-two">Tutorial Material</div>
-                <div class = "note" id = "note_test">Note: Please self-study the material via the link blow.</div>
-                <div class = "tutorial_link"> <a href="https://aaltofi-my.sharepoint.com/:b:/g/personal/jiayi_zhang_aalto_fi/ETYx6GsZjB9DsamEOw-njQwBKqyicwTXT72gtgRBFDizRg?e=q8tc9s">Tutorial link</a></div>
+                <div class = "title-two"><b>Assistance advice</b></div>
+                <div class = "note" id = "note_test">Note: This session is for showing recommendations from AI.</div>
+                <p class = "v vv" id = "recommendation">Waiting for model selection...</p>
+                <div class = "chart-c" id="chart-container-AI"></div>
+                
+                <div class = "bottom">
+                     <!-- <button class = "buttonnext" id="B_Another">Try another suggestion</button>  -->
+                    <!-- <button class = "buttonexplore" id = "B_Explore">Try it</button> -->
+                    <button class = "trybutton" id = "trybuttontwo">Try it</button>
+                </div>
             </div>
             
             <div class = "box-three">
                 <div class = "subtitle">Variable Correlation Exploration</div>
-                <div class = "note">Note: This session is for exploring the relationship between two dependent variables.</div>
+                <div class = "note">Note: This session is for exploring the relationship between two variables.</div>
                     <div class = "content-three">
                         <div class="vbar">
-                            <select class="selectbox" id="variable-two" size=8 style="width:80px;"></select>   
+                            <select class="selectbox" id="variable-two" size=8 style="width:80px;"></select>
+                            
                         </div>
                         
                         <div class="vbar">
                             <select class="selectbox" id="variable-three" size=8 style="width:80px;"></select>
+                            
                         </div>
-                        <div>
-                            <div class = "chart-c" id="chart-container-two"></div>
-                        </div>        
+                    <div>
+                        <div class = "chart-c" id="chart-container-two"></div>
+                    </div>        
 
                     
                 </div>
@@ -57,14 +62,9 @@
             <div class = "box-four">
         
                 <div class = "subtitle">Model Selection</div>
-                <div class = "note">
-                    Note: Please choose the variables to be included in the model by
-                    selecting it and clicking "<<". (">>" for unselecting)</br>AI would give you advice based on your selection, 
-                    and please submit your final choice at last. </div>
+                <div class = "note">Note: Please choose the proper variables to be included in the model to the left box. And then you may ask AI's feedback, and submit your final choice in the end. </div>
                 <div class="container">
-
                     <div class="model_left">
-                        <p>Selected Variable</p>
                         <select id="leftValues" size="5" multiple></select>
                     </div>
                     <div class="arrow">
@@ -72,15 +72,15 @@
                         <input type="button" id="btnRight" value="&gt;&gt;" />
                     </div>
                     <div class="model_right">
-                        <p>Variable Pool</p>
                         <select id="rightValues" size="4" multiple></select>
 
                     </div>
                 </div>
 
-            <form action="/mme_web_user_study/modeling_test_after/index.html">
-                <input class = "submitbutton" type="submit" value="Submit" />
-            </form>
+                <form action="/mme_web_user_study/modeling_test_after/index.html">
+                    <input class = "submitbutton" type="submit" value="Submit" />
+                </form>
+                    
 
                 
             </div>

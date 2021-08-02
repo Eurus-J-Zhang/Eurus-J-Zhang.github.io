@@ -1,13 +1,13 @@
 .grid-parent{
     display: grid;
-    grid-template-rows: 35px auto;
-    gap: 3px;
+    grid-template-rows: 35px auto auto;
+    gap: 1px;
     width: 90%;
     margin-left: auto;
     margin-right: auto;
     margin-top: auto;
     margin-bottom: auto;
-    padding: 3px;
+    padding: 1px;
     background: rgb(199, 198, 198);
 }
 
@@ -22,6 +22,14 @@
 
 .box-one {
     background-color: white;
+}
+.note {
+    background-color: white;
+}
+
+.q_note{
+    margin-left: 10%;
+    margin-right: 10%;
 }
 
 .Demo_questionnaire{

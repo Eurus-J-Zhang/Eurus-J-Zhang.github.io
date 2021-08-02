@@ -1,14 +1,14 @@
 .grid-parent{
     display: grid;
     grid-template-columns: 5fr 5fr;
-    grid-template-rows: 35px 610px;
-    gap: 3px;
+    grid-template-rows: 35px auto 590px;
+    gap: 1px;
     width: 90%;
     margin-left: auto;
     margin-right: auto;
     margin-top: auto;
     margin-bottom: auto;
-    padding: 3px;
+    padding: 1px;
     background: rgb(199, 198, 198);
 }
 
@@ -36,6 +36,7 @@
 }
 
 .scatter_image{
+    margin-top: 10%;
     width:80%;
 }
 
@@ -62,3 +63,12 @@
     height: 30%;
 }
 
+.note {
+    background-color: white;
+    grid-column: span 2;
+}
+
+.m_note{
+    margin-left: 10%;
+    margin-right: 10%;
+}

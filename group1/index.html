@@ -12,7 +12,7 @@
         <div class="grid-parent">
 
             <div class = "title name"> Modelling Made Easy -- User Experiment</div>
-            <div class = "title name"> <a href="https://aaltofi-my.sharepoint.com/:b:/g/personal/jiayi_zhang_aalto_fi/ETYx6GsZjB9DsamEOw-njQwBKqyicwTXT72gtgRBFDizRg?e=q8tc9s">Tutorial link</a></div>
+            <!-- <div class = "title name"> <a href="https://aaltofi-my.sharepoint.com/:b:/g/personal/jiayi_zhang_aalto_fi/ETYx6GsZjB9DsamEOw-njQwBKqyicwTXT72gtgRBFDizRg?e=q8tc9s">Tutorial link</a></div> -->
 
             <div class = "box-one">
                 <div class = "subtitle">Variable exploration</div>
@@ -28,7 +28,7 @@
             <div class = "box-two">
                 <div class = "title-two"><b>Assistance advice</b></div>
                 <div class = "note" id = "note_test">Note: This session is for showing recommendations from AI.</div>
-                <p class = "v vv" id = "recommendataion">Waiting for model selection...</p>
+                <p class = "v vv" id = "recommendation">Waiting for model selection...</p>
                 <div class = "chart-c" id="chart-container-AI"></div>
                 
                 <div class = "bottom">
@@ -49,7 +49,7 @@
                         
                         <div class="vbar">
                             <select class="selectbox" id="variable-three" size=8 style="width:80px;"></select>
-                            <!-- <button class="trybutton" id="trybuttonthree">Try it</button> -->
+                            
                         </div>
                     <div>
                         <div class = "chart-c" id="chart-container-two"></div>
@@ -63,27 +63,25 @@
         
                 <div class = "subtitle">Model Selection</div>
                 <div class = "note">Note: Please choose the proper variables to be included in the model to the left box. And then you may ask AI's feedback, and submit your final choice in the end. </div>
-                    <section class="container">
-                        <div>
-                            <select id="leftValues" size="5" multiple></select>
-                        </div>
-                        <div>
-                            <input type="button" id="btnLeft" value="&lt;&lt;" />
-                            <input type="button" id="btnRight" value="&gt;&gt;" />
-                        </div>
-                        <div>
-                            <select id="rightValues" size="4" multiple></select>
+                <div class="container">
+                    <div class="model_left">
+                        <select id="leftValues" size="5" multiple></select>
+                    </div>
+                    <div class="arrow">
+                        <input type="button" id="btnLeft" value="&lt;&lt;" />
+                        <input type="button" id="btnRight" value="&gt;&gt;" />
+                    </div>
+                    <div class="model_right">
+                        <select id="rightValues" size="4" multiple></select>
 
-                        </div>
-                    </section>
+                    </div>
+                </div>
 
-                <!-- <div class = "bottom"> -->
-                    <!-- <button class = "resetbutton" id="GetFB">Get feedback from AI</button> -->
-                    <form action="/mme_web_user_study/modeling_test_after/index.html">
-                        <input class = "submitbutton" type="submit" value="Submit" />
-                    </form>
+                <form action="/mme_web_user_study/modeling_test_after/index.html">
+                    <input class = "submitbutton" type="submit" value="Submit" />
+                </form>
                     
-                <!-- </div> -->
+
                 
             </div>
         </div>
