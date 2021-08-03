@@ -14,11 +14,15 @@
             <div class = "title name"> Modelling Made Easy -- User Experiment</div>
             <div class = "title_note"> 
                 <p class="t_note">
-
-                Note: In the model test before, we have </p></div>
+                In the model test before, we have Height (X1) Weight (X2) and Hair Length (X3) as 
+                independent variables to be considered in the model, and the correlations between them
+                and with the game points (Y). It is similar in this experiment, and you will construct linear regression 
+                models with 8 independent variables. You could explore them with the left two blocks, and study modeling 
+                with the material via the link. Eventually, you would need to choose the variables 
+                that you'd like to include in this model. Good luck!</p></div>
             <div class = "box-one">
                 <div class = "subtitle">Variable exploration</div>
-                <div class = "note">Note: This session is for exploring the variables. </br>
+                <div class = "note">This session is for exploring the variables. </br>
                     Click the variables on the left 
                     to see the relationship between the dependent variable X and the independent variable Y.</div>
                 <div class = "content">
@@ -31,13 +35,16 @@
            
             <div class = "box-two">
                 <div class = "title-two">Tutorial Material</div>
-                <div class = "note" id = "note_test">Note: Please self-study the material via the link blow.</div>
-                <div class = "tutorial_link"> <a href="https://aaltofi-my.sharepoint.com/:b:/g/personal/jiayi_zhang_aalto_fi/ETYx6GsZjB9DsamEOw-njQwBKqyicwTXT72gtgRBFDizRg?e=q8tc9s">Tutorial link</a></div>
+                <div class = "note" id = "note_test">Please self-study the material.</div>
+                <div class = "pdf_container">
+                    <embed src="../Full_Tutorial.pdf#toolbar=0" type="application/pdf" width="100%" height="100%"/>
+                </div>
+                <!-- <div class = "tutorial_link"> <a href="https://aaltofi-my.sharepoint.com/:b:/g/personal/jiayi_zhang_aalto_fi/ETYx6GsZjB9DsamEOw-njQwBKqyicwTXT72gtgRBFDizRg?e=q8tc9s">Tutorial link</a></div> -->
             </div>
             
             <div class = "box-three">
                 <div class = "subtitle">Variable Correlation Exploration</div>
-                <div class = "note">Note: This session is for exploring the relationship between two dependent variables.</div>
+                <div class = "note">This session is for exploring the relationship between two dependent variables.</div>
                     <div class = "content-three">
                         <div class="vbar">
                             <select class="selectbox" id="variable-two" size=8 style="width:80px;"></select>   
@@ -46,9 +53,9 @@
                         <div class="vbar">
                             <select class="selectbox" id="variable-three" size=8 style="width:80px;"></select>
                         </div>
-                        <div>
-                            <div class = "chart-c" id="chart-container-two"></div>
-                        </div>        
+                        
+                        <div class = "chart-c" id="chart-container-two"></div>
+                              
 
                     
                 </div>
@@ -58,13 +65,12 @@
         
                 <div class = "subtitle">Model Selection</div>
                 <div class = "note">
-                    Note: Please choose the variables to be included in the model by
-                    selecting it and clicking "<<". (">>" for unselecting)</br>AI would give you advice based on your selection, 
-                    and please submit your final choice at last. </div>
+                    Please choose the variables to be included in the model by
+                    selecting it and clicking "<<". </br>(">>" for unselecting) </div>
                 <div class="container">
 
                     <div class="model_left">
-                        <p>Selected Variable</p>
+                        <p style="font-size:80%">Selected Variable</p>
                         <select id="leftValues" size="5" multiple></select>
                     </div>
                     <div class="arrow">
@@ -72,7 +78,7 @@
                         <input type="button" id="btnRight" value="&gt;&gt;" />
                     </div>
                     <div class="model_right">
-                        <p>Variable Pool</p>
+                        <p style="font-size:80%">Variable Pool</p>
                         <select id="rightValues" size="4" multiple></select>
 
                     </div>

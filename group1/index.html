@@ -14,7 +14,15 @@
             <div class = "title name"> Modelling Made Easy -- User Experiment</div>
             <!-- <div class = "title name"> <a href="https://aaltofi-my.sharepoint.com/:b:/g/personal/jiayi_zhang_aalto_fi/ETYx6GsZjB9DsamEOw-njQwBKqyicwTXT72gtgRBFDizRg?e=q8tc9s">Tutorial link</a></div> -->
 
-            <div class = "box-one">
+            <div class = "title_note"> 
+                <p class="t_note">
+                Note: In the model test before, we have Height (X1) Weight (X2) and Hair Length (X3) as 
+                independent variables to be considered in the model. And we have seen the correlations between them
+                and with the game points (Y). It is similar in this experiment but with 8 independent variables. 
+                You could explore them with the left two blocks, and study modeling with the material via the link. 
+                Eventually, you would need to choose the variables that you'd like to include in this model. Good luck!</p></div>
+            
+                <div class = "box-one">
                 <div class = "subtitle">Variable exploration</div>
                 <div class = "note">Note: This session is for exploring the variables.</div>
                 <div class = "content">
@@ -51,9 +59,9 @@
                             <select class="selectbox" id="variable-three" size=8 style="width:80px;"></select>
                             
                         </div>
-                    <div>
+                    
                         <div class = "chart-c" id="chart-container-two"></div>
-                    </div>        
+                           
 
                     
                 </div>
@@ -62,9 +70,16 @@
             <div class = "box-four">
         
                 <div class = "subtitle">Model Selection</div>
-                <div class = "note">Note: Please choose the proper variables to be included in the model to the left box. And then you may ask AI's feedback, and submit your final choice in the end. </div>
+
+                
+                <div class = "note">
+                    Note: Please choose the variables to be included in the model by
+                    selecting it and clicking "<<". (">>" for unselecting)</br>AI would give you advice based on your selection, 
+                    and please submit your final choice at last. </div>
+                
                 <div class="container">
                     <div class="model_left">
+                        <p style="font-size:80%">Selected Variable</p>
                         <select id="leftValues" size="5" multiple></select>
                     </div>
                     <div class="arrow">
@@ -72,6 +87,7 @@
                         <input type="button" id="btnRight" value="&gt;&gt;" />
                     </div>
                     <div class="model_right">
+                        <p style="font-size:80%">Variable Pool</p>
                         <select id="rightValues" size="4" multiple></select>
 
                     </div>

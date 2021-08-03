@@ -1,7 +1,7 @@
 .grid-parent{
     display: grid;
     grid-template-columns: 6fr 4fr;
-    grid-template-rows: 35px 305px 305px;
+    grid-template-rows: 35px auto 330px 330px;
     gap: 1px;
     width: 90%;
     margin-left: auto;
@@ -21,6 +21,15 @@
     padding: 5px;
     gap: 5px;
     grid-column: span 2;
+}
+
+.title_note{
+    background-color: white;
+    grid-column: span 2;
+}
+.t_note{
+    margin-left: 10%;
+    margin-right: 10%;
 }
 
 .box-one {
@@ -62,7 +71,8 @@
 
     text-align: center;
     display: grid;
-    grid-template-rows: 1fr 1fr 1fr 8.5fr 1.5fr ;
+    /* grid-template-rows: 1fr 1fr 1fr 8.5fr 1.5fr ; */
+    grid-template-rows: 30px auto 30px auto auto ;
     gap: 5px;
 }
 .title-two{
@@ -77,10 +87,10 @@
     width: 300px;
     height:12px;
     margin: 5px auto;
-    background-color:#00bfb6;
+    background-color:#fcf2d9;
     padding: 10px;
     text-align: center;
-    color: #fff;
+    color: black;
     position: relative;
   }
   
@@ -90,8 +100,8 @@
     height: 0px;
     position: absolute;
     border-left: 10px solid transparent;
-    border-right: 10px solid #00bfb6;
-    border-top: 10px solid #00bfb6;
+    border-right: 10px solid #fcf2d9;
+    border-top: 10px solid #fcf2d9;
     border-bottom: 10px solid transparent;
     left: -19px;
     top: 6px;
@@ -126,7 +136,7 @@
     color: black;
     text-align: center;
     display: grid;
-    grid-template-rows: 1fr 2fr 9.5fr 1.5fr;
+    grid-template-rows: 30px auto auto auto;
     gap: 10px;
 }
 
@@ -183,7 +193,7 @@ SECTION > DIV + DIV {
     margin-top: auto;
     margin-bottom: auto;
 
-    background-color: rgba(202, 202, 202, 0.253);
+    background-color: #fcf2d9;
 }
 
 .model_left{

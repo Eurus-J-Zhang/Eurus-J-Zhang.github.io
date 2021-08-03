@@ -1,18 +1,28 @@
 .grid-parent{
     display: grid;
-    grid-template-columns: 6fr 4fr;
-    grid-template-rows: 35px 305px 305px;
-    gap: 1px;
+    /* grid-template-columns: 6fr 4fr; */
+    grid-template-rows: 35px auto 330px auto;
+    gap: 3px;
     width: 90%;
     margin-left: auto;
     margin-right: auto;
     margin-top: auto;
     margin-bottom: auto;
-    padding: 1px;
-    background: rgb(199, 198, 198);
+    /* padding: 1px; */
+    background-color: rgb(228, 225, 226);
+    /* background: rgb(199, 198, 198); */
 }
 
-
+.top{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3px;
+}
+.bottom{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 3px;
+}
 
 .title{
     text-align: center;
@@ -24,12 +34,22 @@
     gap: 5px;
 }
 
-.box-one {
+
+.title_note{
+    background-color: white;
+
+}
+.t_note{
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.box-var {
     background-color: white;
     color: black;
     text-align: center;
     display: grid;
-    grid-template-rows: 1fr 1fr 11fr;
+    grid-template-rows: 30px 30px auto;
     gap: 5px;
 }
 
@@ -49,21 +69,19 @@
     height: 20px;
     width: 90px;
     border-radius: 5px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: auto;
-    margin-bottom: auto;
+    margin: auto;
 }
 
 
-.box-two {
+.box-AI {
     background-color: white;
-
     text-align: center;
     display: grid;
-    grid-template-rows: 1fr 1fr 1fr 8.5fr 1.5fr ;
+    /* grid-template-rows: 1fr 1fr 1fr 8.5fr 1.5fr ; */
+    grid-template-rows: 30px auto 30px auto auto ;
     gap: 5px;
 }
+
 .title-two{
     
     color: tomato;
@@ -76,12 +94,10 @@
     width: 300px;
     height:12px;
     margin: 5px auto;
-    background-color:#00bfb6;
+    background-color:#fcf2d9;
     padding: 10px;
     text-align: center;
-    color: #fff;
-    /* font-family: arial; */
-    /* font-size: 90%; */
+    color: black;
     position: relative;
   }
   
@@ -91,8 +107,8 @@
     height: 0px;
     position: absolute;
     border-left: 10px solid transparent;
-    border-right: 10px solid #00bfb6;
-    border-top: 10px solid #00bfb6;
+    border-right: 10px solid #fcf2d9;
+    border-top: 10px solid #fcf2d9;
     border-bottom: 10px solid transparent;
     left: -19px;
     top: 6px;
@@ -105,13 +121,12 @@
     border-radius: 5px;
 }
 
-
-.box-three {
+.box-tutorial {
     background-color: white;
     color: black;
     text-align: center;
     display: grid;
-    grid-template-rows: 1fr 1fr 11fr;
+    grid-template-rows: 30px 30px auto;
     gap: 5px;
 }
 
@@ -122,12 +137,12 @@
 }
 
 
-.box-four {
+.box-model {
     background-color: white;
     color: black;
     text-align: center;
     display: grid;
-    grid-template-rows: 1fr 2fr 9.5fr 1.5fr;
+    grid-template-rows: 30px auto auto auto;
     gap: 10px;
 }
 
@@ -161,17 +176,13 @@ SECTION > DIV + DIV {
 
 .submitbutton{
     background-color: tomato;
-    /* border-radius: 5px; */
     width: 100px;
-    /* grid-column: span 2; */
+
 }
 
 .chart-c{
     width: 400px;
-    margin-top: auto;
-    margin-bottom: auto;
-    margin-left: auto;
-    margin-right: auto;
+    margin: auto;
 }
 
 
@@ -185,7 +196,8 @@ SECTION > DIV + DIV {
     grid-template-columns: 1fr 1fr 1fr;
     margin-top: auto;
     margin-bottom: auto;
-    background-color: rgba(202, 202, 202, 0.253);
+    /* background-color: rgba(202, 202, 202, 0.253); */
+    background-color: #fcf2d9;
 }
 
 .model_left{

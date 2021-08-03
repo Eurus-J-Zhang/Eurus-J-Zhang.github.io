@@ -27,16 +27,13 @@
 
 .box-two {
     background-color: white;
-    color: black;
-    /* text-align: center; */
-    display: grid;
-    grid-template-rows: 1fr 1fr 1fr;
     gap: 5px;
     padding: 5%;
+    
 }
 
 .scatter_image{
-    margin-top: 10%;
+    margin: auto;
     width:80%;
 }
 

@@ -1,6 +1,6 @@
 .grid-parent{
     display: grid;
-    grid-template-columns: 6fr 4fr;
+    grid-template-columns: 5.5fr 4.5fr;
     grid-template-rows: 35px auto 330px 330px;
     gap: 1px;
     width: 90%;
@@ -59,7 +59,7 @@
     background-color: white;
     text-align: center;
     display: grid;
-    grid-template-rows: 30px auto auto ;
+    grid-template-rows: 30px 30px auto ;
     gap: 5px;
 }
 .title-two{
