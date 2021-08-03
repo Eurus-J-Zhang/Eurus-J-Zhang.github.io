@@ -16,15 +16,21 @@
 
             <div class = "title_note"> 
                 <p class="t_note">
-                Note: In the model test before, we have Height (X1) Weight (X2) and Hair Length (X3) as 
-                independent variables to be considered in the model. And we have seen the correlations between them
-                and with the game points (Y). It is similar in this experiment but with 8 independent variables. 
-                You could explore them with the left two blocks, and study modeling with the material via the link. 
-                Eventually, you would need to choose the variables that you'd like to include in this model. Good luck!</p></div>
-            
+                    Instruction: In the model test, we have tried to build the linear regression model 
+                    with independent variables: 
+                    Height (X1) Weight (X2) and Hair Length (X3). 
+                    The idea is similar in this experiment. You will construct a linear regression 
+                    model given 8 independent variables. You could explore them with the left two blocks. 
+                    <b>AI system will assist you in constructing the model,</b> it will give you feedback 
+                    based on your model selections.
+                    Eventually, you would need to choose the variables 
+                    that you'd like to include in this model and sumbit it. Good luck!</p></div>
                 <div class = "box-one">
-                <div class = "subtitle">Variable exploration</div>
-                <div class = "note">Note: This session is for exploring the variables.</div>
+                <div class = "subtitle">Variable Exploration</div>
+                <div class = "note">
+                    This session is for exploring the variables. </br>
+                    Click the variables on the left to see the relationship between the independent 
+                    variable X and the dependent variable Y.</div>
                 <div class = "content">
                     <div class="vbar">
                         <select class="selectbox" id="variable-one" size=8></select>
@@ -34,21 +40,19 @@
             </div>
            
             <div class = "box-two">
-                <div class = "title-two"><b>Assistance advice</b></div>
-                <div class = "note" id = "note_test">Note: This session is for showing recommendations from AI.</div>
+                <div class = "title-two"><b>Assistance Advice</b></div>
+                <div class = "note" id = "note_test">This session is for showing recommendations from AI.</div>
                 <p class = "v vv" id = "recommendation">Waiting for model selection...</p>
                 <div class = "chart-c" id="chart-container-AI"></div>
                 
                 <div class = "bottom">
-                     <!-- <button class = "buttonnext" id="B_Another">Try another suggestion</button>  -->
-                    <!-- <button class = "buttonexplore" id = "B_Explore">Try it</button> -->
                     <button class = "trybutton" id = "trybuttontwo">Try it</button>
                 </div>
             </div>
             
             <div class = "box-three">
                 <div class = "subtitle">Variable Correlation Exploration</div>
-                <div class = "note">Note: This session is for exploring the relationship between two variables.</div>
+                <div class = "note">This session is for exploring the relationship between two variables.</div>
                     <div class = "content-three">
                         <div class="vbar">
                             <select class="selectbox" id="variable-two" size=8 style="width:80px;"></select>
@@ -73,8 +77,10 @@
 
                 
                 <div class = "note">
-                    Note: Please choose the variables to be included in the model by
-                    selecting it and clicking "<<". (">>" for unselecting)</br>AI would give you advice based on your selection, 
+
+                    Please choose the variables to be included in the model by
+                    selecting it </br>  and clicking "<<" to move it to the left box. (">>" for unselecting)
+                    </br>AI would give you advice based on your selection, 
                     and please submit your final choice at last. </div>
                 
                 <div class="container">

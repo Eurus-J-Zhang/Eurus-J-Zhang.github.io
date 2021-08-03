@@ -29,14 +29,14 @@
     background-color: white;
     grid-column: span 2;
 }
+
 .t_note{
     margin-left: 10%;
     margin-right: 10%;
 }
 
-.box-one {
+.box-var {
     background-color: white;
-    color: black;
     text-align: center;
     display: grid;
     grid-template-rows: 30px auto auto;
@@ -45,8 +45,7 @@
 
 .content{
     display: grid;
-    grid-template-columns: 3fr 7fr;
-    gap: 5px;
+    grid-template-columns: 2fr 3fr;
 }
 
 .vbar{
@@ -55,20 +54,14 @@
     gap: 5px;
 }
 
-.box-two {
+.box-tutorial {
     background-color: white;
     text-align: center;
     display: grid;
     grid-template-rows: 30px 30px auto ;
     gap: 5px;
 }
-.title-two{
-    
-    color: tomato;
-    padding: 5px;
-    background-color: linen;
-    
-}
+
 
 .v {
     width: 300px;
@@ -93,38 +86,28 @@
     left: -19px;
     top: 6px;
   }
-  
 
-
-.buttonnext{
-    border: 1px solid black;
-    border-radius: 5px;
-}
-
-
-.box-three {
+.box-var_c {
     background-color: white;
-    color: black;
     text-align: center;
     display: grid;
     grid-template-rows: 30px auto auto;
     gap: 5px;
 }
 
-.content-three{
+.content-var_c{
     display: grid;
-    grid-template-columns: 2fr 2fr 6fr;
+    grid-template-columns: 1fr 1fr 3fr;
     gap: 5px;
 }
 
 
-.box-four {
+.box-model {
     background-color: white;
-    color: black;
     text-align: center;
     display: grid;
     grid-template-rows: 30px auto auto auto;
-    gap: 10px;
+    gap: 5px;
 }
 
 .subtitle{
@@ -163,7 +146,7 @@ SECTION > DIV + DIV {
 }
 
 .chart-c{
-    width: 400px;
+    width: 90%;
     margin: auto;
 }
 

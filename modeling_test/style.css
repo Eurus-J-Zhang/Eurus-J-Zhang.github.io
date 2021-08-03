@@ -1,13 +1,10 @@
 .grid-parent{
     display: grid;
     grid-template-columns: 5fr 5fr;
-    grid-template-rows: 35px auto 590px;
+    grid-template-rows: 35px auto auto;
     gap: 1px;
     width: 90%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: auto;
-    margin-bottom: auto;
+    margin: auto;
     padding: 1px;
     background: rgb(199, 198, 198);
 }
@@ -34,7 +31,7 @@
 
 .scatter_image{
     margin: auto;
-    width:80%;
+    width:95%;
 }
 
 .box-one{
@@ -43,6 +40,7 @@
     background-color: white;
     display: grid;
     gap: 5px;
+    padding: 5%;
 }
 
 .form{

@@ -1,6 +1,5 @@
 .grid-parent{
     display: grid;
-    /* grid-template-columns: 6fr 4fr; */
     grid-template-rows: 35px auto 330px auto;
     gap: 3px;
     width: 90%;
@@ -10,7 +9,6 @@
     margin-bottom: auto;
     /* padding: 1px; */
     background-color: rgb(228, 225, 226);
-    /* background: rgb(199, 198, 198); */
 }
 
 .top{
@@ -46,7 +44,6 @@
 
 .box-var {
     background-color: white;
-    color: black;
     text-align: center;
     display: grid;
     grid-template-rows: 30px 30px auto;
@@ -55,7 +52,7 @@
 
 .content{
     display: grid;
-    grid-template-columns: 3fr 7fr;
+    grid-template-columns: 4fr 6fr;
     gap: 5px;
 }
 
@@ -77,17 +74,14 @@
     background-color: white;
     text-align: center;
     display: grid;
-    /* grid-template-rows: 1fr 1fr 1fr 8.5fr 1.5fr ; */
     grid-template-rows: 30px auto 30px auto auto ;
     gap: 5px;
 }
 
 .title-two{
-    
     color: tomato;
     padding: 5px;
     background-color: linen;
-    
 }
 
 .v {
@@ -101,7 +95,7 @@
     position: relative;
   }
   
-  .vv:before {
+.vv:before {
     content: "";
     width: 0px;
     height: 0px;
@@ -112,27 +106,22 @@
     border-bottom: 10px solid transparent;
     left: -19px;
     top: 6px;
-  }
+    }
   
 
-
-.buttonnext{
-    border: 1px solid black;
-    border-radius: 5px;
-}
 
 .box-tutorial {
     background-color: white;
     color: black;
     text-align: center;
     display: grid;
-    grid-template-rows: 30px 30px auto;
+    grid-template-rows: 30px auto;
     gap: 5px;
 }
 
 .content-three{
     display: grid;
-    grid-template-columns: 2fr 2fr 6fr;
+    grid-template-columns: 1fr 1fr 3fr;
     gap: 5px;
 }
 
@@ -187,7 +176,7 @@ SECTION > DIV + DIV {
 
 
 #chart-container-AI{
-    width: 330px;
+    width: 90%;
 }
 
 
@@ -196,7 +185,6 @@ SECTION > DIV + DIV {
     grid-template-columns: 1fr 1fr 1fr;
     margin-top: auto;
     margin-bottom: auto;
-    /* background-color: rgba(202, 202, 202, 0.253); */
     background-color: #fcf2d9;
 }
 
