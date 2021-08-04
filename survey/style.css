@@ -21,11 +21,11 @@
 }
 
 
-.box-one {
+.box {
     background-color: white;
 }
 
-.Demo_questionnaire{
+.survey{
     margin-top: 30px;
     margin-left: 20%;
     margin-right: 20%;
@@ -36,14 +36,13 @@
     width: 100px;
 }
 
-.survey_text{
+.survey_test{
     width:80%;
-    height: 30%;
+    height: 50px;
 }
 
 .note {
     background-color: white;
-
 }
 
 .m_note{
